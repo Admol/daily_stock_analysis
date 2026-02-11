@@ -150,7 +150,7 @@ class HistoryService:
                 "stock_code": record.code,
                 "stock_name": record.name,
                 "report_type": record.report_type,
-                "created_at": record.created_at.isoformat() if record.created_at else None,
+                "created_at": record.created_at.astimezone().isoformat() if record.created_at else None,
                 "analysis_summary": record.analysis_summary,
                 "operation_advice": record.operation_advice,
                 "trend_prediction": record.trend_prediction,
