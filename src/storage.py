@@ -236,7 +236,7 @@ class AnalysisHistory(Base):
             'secondary_buy': self.secondary_buy,
             'stop_loss': self.stop_loss,
             'take_profit': self.take_profit,
-            'created_at': self.created_at.isoformat() if self.created_at else None,
+            'created_at': self.created_at.astimezone().isoformat() if self.created_at else None,
         }
 
 

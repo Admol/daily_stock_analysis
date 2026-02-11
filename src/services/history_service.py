@@ -95,7 +95,7 @@ class HistoryService:
                     "report_type": record.report_type,
                     "sentiment_score": record.sentiment_score,
                     "operation_advice": record.operation_advice,
-                    "created_at": record.created_at.isoformat() if record.created_at else None,
+                    "created_at": record.created_at.astimezone().isoformat() if record.created_at else None,
                 })
             
             return {

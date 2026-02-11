@@ -67,9 +67,9 @@ class TaskInfo:
             "progress": self.progress,
             "message": self.message,
             "report_type": self.report_type,
-            "created_at": self.created_at.isoformat(),
-            "started_at": self.started_at.isoformat() if self.started_at else None,
-            "completed_at": self.completed_at.isoformat() if self.completed_at else None,
+            "created_at": self.created_at.astimezone().isoformat(),
+            "started_at": self.started_at.astimezone().isoformat() if self.started_at else None,
+            "completed_at": self.completed_at.astimezone().isoformat() if self.completed_at else None,
             "error": self.error,
         }
     
